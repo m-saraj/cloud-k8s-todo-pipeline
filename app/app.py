@@ -1,19 +1,13 @@
+from flask import Flask, request, jsonify
 print("Flask app is starting...")
 
-from flask import Flask, request, jsonify
 app = Flask(__name__)
 
-# Add this root route
-@app.route('/')
-def home():
-    return "🚀 Flask Todo App running inside Kubernetes!"
-
-
-# ✅ Add this route to handle GET /
-@app.route("/", methods=["GET"])
+# ✅ Root route
+@app.route('/', methods=["GET"])
 def home():
     return "✅ Hello from your Flask TODO App!"
-    
+
 # In-memory task store
 tasks = []
 
