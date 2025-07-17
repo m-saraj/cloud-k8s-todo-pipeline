@@ -1,26 +1,23 @@
-# ---------- Stage 1: Build Base ----------
-FROM python:3.12-slim AS builder
+# ======== STAGE 1: Build base =========
+FROM python:3.12-slim as base
 
-# Set working directory
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Set work directory
 WORKDIR /app
 
-# Install pip dependencies
+# Install dependencies
 COPY app/requirements.txt .
-RUN pip install --upgrade pip && \
-    pip install --user -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# ---------- Stage 2: Final Runtime ----------
-FROM python:3.12-slim
+# ======== STAGE 2: Copy app and run =========
+FROM base as final
 
 WORKDIR /app
 
-# Copy installed packages from builder
-COPY --from=builder /root/.local /root/.local
-
-# Update PATH
-ENV PATH=/root/.local/bin:$PATH
-
-# Copy app code
+# Copy application code
 COPY app/ .
 
 # Expose port
