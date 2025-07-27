@@ -35,10 +35,11 @@ jobs:
     - name: Push Docker image to ECR
       run: docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-    - name: Install kubectl
-      uses: kubernetes-sigs/setup-kubectl@v1
-      with:
-        version: 'v1.30'
+    - run: |
+        curl -LO "https://dl.k8s.io/release/v1.29.0/bin/linux/amd64/kubectl"
+        chmod +x kubectl
+        sudo mv kubectl /usr/local/bin/
+
 
 
     - name: Update kubeconfig
