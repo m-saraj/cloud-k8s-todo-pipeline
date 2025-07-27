@@ -38,7 +38,7 @@ jobs:
     - name: Install kubectl
       uses: kubernetes-sigs/setup-kubectl@v1
       with:
-      version: 'v1.29.0'
+        version: 'v1.30'
 
 
     - name: Update kubeconfig
