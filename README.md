@@ -1,4 +1,7 @@
 
+<img width="1024" height="1536" alt="Diagram" src="https://github.com/user-attachments/assets/65a97022-4a9b-4c8c-80c2-533a2d74e0e9" />
+
+
 🧱 Phase-by-Phase Breakdown
 
 
