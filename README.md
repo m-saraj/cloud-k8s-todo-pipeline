@@ -1,5 +1,6 @@
 
-<img width="1024" height="1536" alt="Diagram" src="https://github.com/user-attachments/assets/65a97022-4a9b-4c8c-80c2-533a2d74e0e9" />
+
+<img width="1536" height="1024" alt="ChatGPT Image Jul 29, 2025, 06_16_22 PM" src="https://github.com/user-attachments/assets/a6eddca6-cf05-4cf5-9f70-4c0095dae2b8" />
 
 
 🧱 Phase-by-Phase Breakdown
